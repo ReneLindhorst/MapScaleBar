@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="x1F-rl-7bR">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Alternating-->
+        <scene sceneID="ird-Ha-Hb0">
+            <objects>
+                <viewController id="7uL-x4-eMc" customClass="ViewController" customModule="MapScaleBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uIa-De-zPn"/>
+                        <viewControllerLayoutGuide type="bottom" id="A2D-CN-EdQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Q7r-ia-EWu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bLs-46-7Cx">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                                <connections>
+                                    <outlet property="delegate" destination="7uL-x4-eMc" id="p9e-Nl-4ln"/>
+                                </connections>
+                            </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I8y-BV-Q5K" customClass="MapScaleBar" customModule="MapScaleBar" customModuleProvider="target">
+                                <rect key="frame" x="435" y="511" width="150" height="25"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.70000000000000007" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Ehv-8q-bG4"/>
+                                    <constraint firstAttribute="height" constant="25" id="HnS-g4-9r8"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="typeAdapter">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="labelOptionAdapter">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="mapView" destination="bLs-46-7Cx" id="gHk-ww-vsC"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="A2D-CN-EdQ" firstAttribute="top" secondItem="I8y-BV-Q5K" secondAttribute="bottom" constant="15" id="8VK-3y-Tue"/>
+                            <constraint firstItem="bLs-46-7Cx" firstAttribute="leading" secondItem="Q7r-ia-EWu" secondAttribute="leading" id="FpM-q0-QxF"/>
+                            <constraint firstAttribute="trailing" secondItem="bLs-46-7Cx" secondAttribute="trailing" id="Okq-JG-VgO"/>
+                            <constraint firstItem="bLs-46-7Cx" firstAttribute="top" secondItem="Q7r-ia-EWu" secondAttribute="top" id="hYG-Pp-siX"/>
+                            <constraint firstItem="A2D-CN-EdQ" firstAttribute="top" secondItem="bLs-46-7Cx" secondAttribute="bottom" id="jtH-w0-JM3"/>
+                            <constraint firstAttribute="trailing" secondItem="I8y-BV-Q5K" secondAttribute="trailing" constant="15" id="tFp-XB-Zko"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Alternating" id="UVq-xP-FeD"/>
+                    <connections>
+                        <outlet property="mapScaleBar" destination="I8y-BV-Q5K" id="5LL-xK-t3R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DBi-pu-fg1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="733" y="472"/>
+        </scene>
+        <!--DoubleAlternating-->
+        <scene sceneID="N3S-Fx-YIf">
+            <objects>
+                <viewController id="hk9-LR-50P" customClass="ViewController" customModule="MapScaleBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gmw-s9-4an"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zeg-Ag-tWZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pCk-Fk-nWf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="oz3-rb-KHk">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                                <connections>
+                                    <outlet property="delegate" destination="hk9-LR-50P" id="57z-hC-4Bs"/>
+                                </connections>
+                            </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PEB-R8-Jjr" customClass="MapScaleBar" customModule="MapScaleBar" customModuleProvider="target">
+                                <rect key="frame" x="435" y="511" width="150" height="25"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Zd4-5q-v4F"/>
+                                    <constraint firstAttribute="height" constant="25" id="bbh-OH-cDw"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="typeAdapter">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="labelOptionAdapter">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="mapView" destination="oz3-rb-KHk" id="Nz3-KM-5SH"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oz3-rb-KHk" firstAttribute="top" secondItem="pCk-Fk-nWf" secondAttribute="top" id="9aC-3C-hPH"/>
+                            <constraint firstAttribute="trailing" secondItem="oz3-rb-KHk" secondAttribute="trailing" id="NQF-MW-nDO"/>
+                            <constraint firstAttribute="trailing" secondItem="PEB-R8-Jjr" secondAttribute="trailing" constant="15" id="OoM-hy-hME"/>
+                            <constraint firstItem="Zeg-Ag-tWZ" firstAttribute="top" secondItem="oz3-rb-KHk" secondAttribute="bottom" id="Op0-3Z-HDC"/>
+                            <constraint firstItem="Zeg-Ag-tWZ" firstAttribute="top" secondItem="PEB-R8-Jjr" secondAttribute="bottom" constant="15" id="hKU-7e-Ee4"/>
+                            <constraint firstItem="oz3-rb-KHk" firstAttribute="leading" secondItem="pCk-Fk-nWf" secondAttribute="leading" id="rbX-L6-z3K"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="DoubleAlternating" id="cQ5-Nz-6IC"/>
+                    <connections>
+                        <outlet property="mapScaleBar" destination="PEB-R8-Jjr" id="AFk-qT-VVO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b9y-MW-PuS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1378" y="472"/>
+        </scene>
+        <!--SingleDivision-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MapScaleBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Qga-Cm-pad">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="oqp-At-MPn"/>
+                                </connections>
+                            </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2R0-aP-3Bj" customClass="MapScaleBar" customModule="MapScaleBar" customModuleProvider="target">
+                                <rect key="frame" x="435" y="511" width="150" height="25"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="0.70000000000000007" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Aoi-YL-9IU"/>
+                                    <constraint firstAttribute="height" constant="25" id="ph8-Xs-qLy"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="typeAdapter">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="labelOptionAdapter">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="mapView" destination="Qga-Cm-pad" id="XcV-pl-RBk"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Qga-Cm-pad" secondAttribute="bottom" id="5vw-wf-qqS"/>
+                            <constraint firstItem="Qga-Cm-pad" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="9Zc-UK-DOT"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2R0-aP-3Bj" secondAttribute="bottom" constant="15" id="GbO-pg-7Yi"/>
+                            <constraint firstItem="Qga-Cm-pad" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="TxR-sk-O8B"/>
+                            <constraint firstAttribute="trailing" secondItem="2R0-aP-3Bj" secondAttribute="trailing" constant="15" id="XLe-w9-BcZ"/>
+                            <constraint firstAttribute="trailing" secondItem="Qga-Cm-pad" secondAttribute="trailing" id="d17-3D-WiR"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="SingleDivision" id="X1k-lj-9ss"/>
+                    <connections>
+                        <outlet property="mapScaleBar" destination="2R0-aP-3Bj" id="oQE-U3-86U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="89" y="472"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="sUm-ZR-b0e">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="x1F-rl-7bR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="lm4-Ru-PjH">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="mar-Ge-xDk"/>
+                        <segue destination="7uL-x4-eMc" kind="relationship" relationship="viewControllers" id="hEv-VY-SWn"/>
+                        <segue destination="hk9-LR-50P" kind="relationship" relationship="viewControllers" id="T6a-CY-4vY"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZnE-L0-V7u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="733" y="-276"/>
+        </scene>
+    </scenes>
+</document>
