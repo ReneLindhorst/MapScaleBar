@@ -260,20 +260,21 @@ public class MapScaleBar: UIView {
         
         let attributedString = NSMutableAttributedString(string: string)
         
-        var paragraph = NSMutableParagraphStyle()
+        let paragraph = NSMutableParagraphStyle()
         paragraph.maximumLineHeight = 12.0
         paragraph.alignment = .Center
-        paragraph.tabStops = [NSTextTab(textAlignment: .Right, location: labelRect.size.width, options:nil)]
+        paragraph.tabStops = [NSTextTab(textAlignment: .Right, location: labelRect.size.width, options: [:])]
         
-        attributedString.addAttribute(NSBackgroundColorAttributeName, value:UIColor.clearColor(), range: NSMakeRange(0, count(string)))
-        attributedString.addAttribute(NSFontAttributeName, value:UIFont.systemFontOfSize(10), range: NSMakeRange(0, count(string)))
-        attributedString.addAttribute(NSParagraphStyleAttributeName, value: paragraph, range: NSMakeRange(0, count(string)))
+        let count = string.utf8.count
+        attributedString.addAttribute(NSBackgroundColorAttributeName, value:UIColor.clearColor(), range: NSMakeRange(0, count))
+        attributedString.addAttribute(NSFontAttributeName, value:UIFont.systemFontOfSize(10), range: NSMakeRange(0, count))
+        attributedString.addAttribute(NSParagraphStyleAttributeName, value: paragraph, range: NSMakeRange(0, count))
         
         attributedString.drawInRect(labelRect)
     }
 
     
-    public required init(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         initView()
     }

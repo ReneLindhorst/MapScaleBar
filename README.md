@@ -6,7 +6,7 @@ Unfortunately ´MKMapView´ doesn't provide a build-in one.
 
 ## Requirements
 
-MapScaleBar requires **Swift 1.2** and **iOS 8.0**.
+MapScaleBar requires **Swift 2.0** and **iOS 8.0**.
 The MapKit and CoreLocation frameworks are of course needed as well.
 
 ## Installation
